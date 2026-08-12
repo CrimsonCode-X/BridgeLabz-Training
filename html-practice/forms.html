@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration Form</title>
+</head>
+
+<body>
+
+    <h1 align="center">Student Registration Form</h1>
+
+    <form>
+
+        <table border="1" width="98%" cellpadding="10" cellspacing="0"
+               align="center">
+
+            <!-- Form Heading -->
+            <tr>
+                <th colspan="2">
+                    Registration Form
+                </th>
+            </tr>
+
+            <!-- Full Name -->
+            <tr>
+                <td width="30%">Full Name</td>
+                <td>
+                    <input type="text"
+                           name="fullname"
+                           placeholder="Enter your name">
+                </td>
+            </tr>
+
+            <!-- Email -->
+            <tr>
+                <td>Email</td>
+                <td>
+                    <input type="email"
+                           name="email"
+                           placeholder="abc@gmail.com">
+                </td>
+            </tr>
+
+            <!-- Phone Number -->
+            <tr>
+                <td>Phone Number</td>
+                <td>
+                    <input type="tel"
+                           name="phone"
+                           placeholder="9876543210">
+                </td>
+            </tr>
+
+            <!-- Date of Birth -->
+            <tr>
+                <td>Date of Birth</td>
+                <td>
+                    <input type="date" name="dob">
+                </td>
+            </tr>
+
+            <!-- Gender -->
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input type="radio" name="gender" value="male">
+                    Male
+
+                    <input type="radio" name="gender" value="female">
+                    Female
+
+                    <input type="radio" name="gender" value="other">
+                    Other
+                </td>
+            </tr>
+
+            <!-- Skills -->
+            <tr>
+                <td>Skills</td>
+                <td>
+                    <input type="checkbox" name="skills" value="html">
+                    HTML
+
+                    <input type="checkbox" name="skills" value="css">
+                    CSS
+
+                    <input type="checkbox" name="skills" value="javascript">
+                    JavaScript
+                </td>
+            </tr>
+
+            <!-- Course -->
+            <tr>
+                <td>Course</td>
+                <td>
+                    <select name="course">
+                        <option value="">--Select Course--</option>
+                        <option value="cse">
+                            Computer Science & Engineering
+                        </option>
+                        <option value="it">
+                            Information Technology
+                        </option>
+                        <option value="ece">
+                            Electronics & Communication
+                        </option>
+                        <option value="me">
+                            Mechanical Engineering
+                        </option>
+                    </select>
+                </td>
+            </tr>
+
+            <!-- Address -->
+            <tr>
+                <td>Address</td>
+                <td>
+                    <textarea name="address"
+                              rows="5"
+                              cols="35"></textarea>
+                </td>
+            </tr>
+
+            <!-- Upload Resume -->
+            <tr>
+                <td>Upload Resume</td>
+                <td>
+                    <input type="file" name="resume">
+                </td>
+            </tr>
+
+            <!-- Buttons -->
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Register">
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+
+        </table>
+
+    </form>
+
+</body>
+
+</html>
