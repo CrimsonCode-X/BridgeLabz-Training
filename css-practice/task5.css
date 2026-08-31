@@ -1,0 +1,15 @@
+
+
+.container{
+    border: 1px solid red;
+    height: 600px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 150px);
+}
+
+.box{
+    border: 1px solid black;
+    background-color: red;
+}
