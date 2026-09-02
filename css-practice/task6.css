@@ -1,0 +1,26 @@
+
+
+.container{
+    border: 3px solid red;
+    height: 600px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+.card{
+    border: 2px solid black;
+    width: 200px;
+    height: 300px;
+    text-align: center;
+    background-image: radial-gradient(red, blue);
+    transition-property: transform;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+.card:hover{
+    box-shadow: -10px -20px 20px red, 10px 10px 20px blue;
+    transform: translateX(-50px);
+}
