@@ -1,0 +1,26 @@
+h1{
+    position: relative;
+}
+
+h1::before{
+    position: absolute;
+    content: "we";
+    width: 60px;
+    height: 3px;
+    background-color: red;
+    top: 50px;
+    transition: width 1s ease;
+}
+
+h1::first-letter{
+    font-size: 3rem;
+    color: blue;
+}
+
+h1:hover::before{
+    width: 100px;
+}
+
+h1:hover::first-letter{
+    color: red;
+}
