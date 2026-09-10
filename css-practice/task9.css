@@ -1,0 +1,30 @@
+.container{
+    width: 100%;
+    height: 100%;
+}
+
+.circle{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: red;
+    animation: move 2s ease infinite;
+}
+
+@keyframes move{
+    0%{
+        transform: translateY(0px);
+    }
+    30%{
+        transform: translateY(900px);
+    }
+    50%{
+        transform: translateY(500px);
+    }
+    75%{
+        transform: translateY(250px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
