@@ -4,7 +4,7 @@ h1{
 
 h1::before{
     position: absolute;
-    content: "we";
+    content: "";
     width: 60px;
     height: 3px;
     background-color: red;
@@ -23,4 +23,42 @@ h1:hover::before{
 
 h1:hover::first-letter{
     color: red;
+}
+
+.btn{
+    margin: 30px 50px;
+    position: relative;
+}
+
+.btn::after{
+    position: absolute;
+    content: "This is a button";
+    width: 120px;
+    height: 25px;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    bottom: 25px;
+    left: 20px;
+    opacity: 0;
+}
+
+.btn::before{
+    position: absolute;
+    content: "";
+    background-color: black;
+    height: 20px;
+    width: 20px;
+    transform: rotate(45deg);
+    bottom: 25px;
+    left: 30px;
+    opacity: 0;
+}
+
+.btn:hover::after{
+    opacity: 1;
+}
+
+.btn:hover::before{
+    opacity: 1;
 }
