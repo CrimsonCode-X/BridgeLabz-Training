@@ -1,0 +1,7 @@
+/* Override Bootstrap theme variables: every .text-primary, .btn-primary etc. uses these */
+:root{--bs-primary:#7b2cbf;--bs-primary-rgb:123,44,191;--bs-font-sans-serif:"Poppins",sans-serif;--bs-body-font-family:var(--bs-font-sans-serif)}
+/* .btn-primary has its own variables, so they are re-pointed to the theme color */
+.btn-primary{--bs-btn-bg:var(--bs-primary);--bs-btn-border-color:var(--bs-primary);--bs-btn-hover-bg:#5a189a;--bs-btn-hover-border-color:#5a189a;--bs-btn-active-bg:#5a189a;--bs-btn-active-border-color:#5a189a}
+h1,h2,h3,h4{font-weight:700}
+.theme-header,.theme-footer{background:var(--bs-primary)}
+.card{border-top:4px solid var(--bs-primary)}

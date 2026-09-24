@@ -1,0 +1,3 @@
+.carousel-item img{height:60vh;min-height:280px;object-fit:cover}
+.carousel-caption{background:rgba(0,0,0,.45);border-radius:.5rem;padding:.5rem 1rem}
+.progress{height:1.5rem}

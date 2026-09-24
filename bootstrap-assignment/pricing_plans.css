@@ -1,0 +1,4 @@
+.plan-card{transition:transform .3s ease,box-shadow .3s ease}
+/* same look as Bootstrap's .shadow-lg, applied on hover */
+.plan-card:hover{transform:translateY(-8px);box-shadow:0 1rem 3rem rgba(0,0,0,.175)}
+.plan-card li{padding:.3rem 0}
