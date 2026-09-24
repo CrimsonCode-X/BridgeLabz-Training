@@ -1,0 +1,12 @@
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; display: flex; flex-direction: column; font-family: Arial, sans-serif; background: #f1f5f9; color: #172033; }
+.site-header { display: flex; justify-content: space-between; align-items: center; padding: 20px 7%; background: #1e293b; color: white; }
+.logo { font-size: 24px; font-weight: bold; }
+nav { display: flex; gap: 22px; }
+nav a { color: white; text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+.features { flex: 1; display: flex; gap: 25px; justify-content: center; align-items: center; padding: 40px; }
+.features article { flex: 1; max-width: 300px; padding: 30px; background: white; border-radius: 12px; box-shadow: 0 5px 16px #0002; transition: transform .3s ease; text-align: center; }
+.features article:hover { transform: scale(1.05); }
+footer { text-align: center; padding: 20px; background: #e2e8f0; }
+@media (max-width: 749px) { .features { flex-direction: column; } .features article { max-width: 500px; width: 100%; } }

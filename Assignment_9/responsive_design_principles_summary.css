@@ -1,0 +1,8 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; background: #f1f5f9; color: #172033; }
+main { max-width: 1050px; margin: auto; padding: 40px 20px; text-align: center; }
+.principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 30px; }
+article { padding: 30px; background: white; border-radius: 14px; box-shadow: 0 5px 15px #0002; transition: background .3s ease, color .3s ease, transform .3s ease; }
+article:hover { background: linear-gradient(135deg, #4f46e5, #7c3aed); color: white; transform: translateY(-5px); }
+code { display: block; margin-top: 20px; overflow-wrap: anywhere; }
+@media (max-width: 599px) { .principles { grid-template-columns: 1fr; } }

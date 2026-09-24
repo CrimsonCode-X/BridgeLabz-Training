@@ -1,0 +1,6 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; background: #eef2ff; color: #172033; }
+.typography { max-width: 900px; margin: auto; padding: 70px 25px; text-align: center; }
+h1 { font-size: clamp(1.5rem, 4vw, 3rem); margin-bottom: 25px; }
+p { font-size: clamp(1rem, 2vw, 1.5rem); line-height: 1.7; margin: 0 auto; }
+@media (max-width: 700px) { .typography { padding: 40px 18px; } p { line-height: 1.55; } }
