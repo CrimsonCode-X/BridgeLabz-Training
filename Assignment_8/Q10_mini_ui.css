@@ -1,0 +1,16 @@
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; display: flex; flex-direction: column; font-family: Arial, sans-serif; background: #eef2f7; color: #172033; }
+header, footer { text-align: center; padding: 20px; }
+main { flex: 1; display: flex; justify-content: center; align-items: center; padding: 30px; }
+.card { width: min(800px, 100%); display: flex; gap: 30px; align-items: center; background: white; padding: 30px; border: 1px solid #dbe1ea; border-radius: 16px; box-shadow: 0 10px 28px #0002; }
+.card img { width: 180px; height: 180px; object-fit: cover; border-radius: 50%; }
+.content { flex: 1; }
+form { display: flex; flex-direction: column; gap: 9px; }
+input, textarea { width: 100%; padding: 11px; border: 1px solid #cbd5e1; border-radius: 8px; font: inherit; }
+input:focus, textarea:focus { outline: 3px solid #bfdbfe; border-color: #2563eb; }
+.form-actions { display: flex; gap: 10px; margin-top: 8px; }
+button { padding: 11px 18px; border: 0; border-radius: 8px; background: #2563eb; color: white; cursor: pointer; transition: .2s; }
+button:hover { transform: translateY(-2px); }
+button:focus { outline: 3px solid #93c5fd; }
+button.reset { background: #64748b; }
+@media (max-width: 650px) { .card { flex-direction: column; text-align: left; } .card img { width: 140px; height: 140px; } .form-actions { flex-direction: column; } }

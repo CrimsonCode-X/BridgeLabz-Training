@@ -1,0 +1,20 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; background: #f1f5f9; color: #172033; }
+header, footer { text-align: center; padding: 22px; }
+.card { max-width: 700px; margin: 20px auto; padding: 30px; background: white; border-radius: 12px; box-shadow: 0 5px 18px #0002; }
+/* Element selector: styles every paragraph. */
+p { line-height: 1.6; }
+/* Class selector: styles elements carrying .highlight. */
+.highlight { background: #fef3c7; padding: 8px; }
+/* ID selector: styles the unique #special element. */
+#special { color: #be123c; font-weight: bold; }
+/* Attribute selector: targets links having an href. */
+a[href] { color: #2563eb; }
+/* Descendant combinator: all paragraphs inside .parent. */
+.parent p { color: #047857; }
+/* Child combinator: direct span children of .parent. */
+.parent > span { background: #dcfce7; padding: 5px; }
+/* Adjacent sibling: the first p immediately after ul. */
+ul + .after-list { color: #7c3aed; }
+/* General sibling: all matching p siblings after ul. */
+ul ~ .general-sibling { text-decoration: underline; }

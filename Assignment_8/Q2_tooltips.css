@@ -1,0 +1,7 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; background: #eef2ff; }
+.tooltip-page { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.tooltip-row { display: flex; gap: 45px; flex-wrap: wrap; justify-content: center; margin-top: 35px; }
+.tooltip-item { position: relative; padding: 15px 22px; background: #312e81; color: white; border-radius: 10px; cursor: help; }
+.tooltip { position: absolute; bottom: calc(100% + 12px); left: 50%; transform: translateX(-50%); width: 190px; padding: 10px; background: #111827; border-radius: 7px; text-align: center; opacity: 0; visibility: hidden; transition: opacity 0.3s ease-in-out; }
+.tooltip-item:hover .tooltip { opacity: 1; visibility: visible; }
