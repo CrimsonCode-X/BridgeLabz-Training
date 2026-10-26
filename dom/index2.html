@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DOM Input</h1>
+    <input id="inputName" type="text" placeholder="name">
+    <button id="btn">Add</button>
+    <ul id="list">
+
+    </ul>
+</body>
+<script>
+    const inputEl = document.querySelector("#inputName")
+    const btnEL = document.querySelector("#btn")
+    const listEl = document.querySelector("#list")
+    btnEL.addEventListener("click",()=>{
+        let val = inputEl.value.trim();
+        //create li element
+        //First way to create li element
+        // const liEl = document.createElement("li");
+        // liEl.textContent = val;
+        // liEl.style.color = "red";
+        // listEl.appendChild(liEl);
+        // listEl.textContent = val;
+        // console.log(val);
+        if(val === ""){
+            alert("Empty text not allowed");
+            return;
+        }
+        // Second way to create li element
+        listEl.innerHTML += `<li>${val}</li>`;
+        inputEl.value = "";
+
+    })
+</script>
+</html>
