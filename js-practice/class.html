@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Post Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Body</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+            
+        </tbody>
+    </table>
+    <button id="btn">Click Me</button>
+    <script>
+        async function getdata(){
+            try{
+                let res = await fetch('https://jsonplaceholder.typicode.com/posts');
+                let data = await res.json();
+                console.log(data);
+                
+                let tbody = document.getElementById('tbody');
+                data.forEach(element => {
+                    let tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td>${element.Id}</td>
+                        <td>${element.postId}</td>
+                        <td>${element.name}</td>
+                        <td>${element.email}</td>
+                        <td>${element.body}</td>
+                        <td><button onclick="deleteData(${element.id}, this)">Delete</button></td>
+                    `;
+                    tbody.appendChild(tr);
+                })
+            }
+
+            catch(error){
+                console.log(error);
+            }
+        }
+
+        async function deleteData(id, button) {
+            try{
+                let res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
+                    method: 'DELETE'
+                });
+
+                if (!res.ok) {
+                    throw new Error(`Could not delete post ${id}: ${res.status}`);
+                }
+
+                button.closest('tr').remove();
+                console.log(`Deleted post with id: ${id}`);
+            }
+
+            catch(error){
+                console.log(error);
+            }
+        }
+
+        let a = document.getElementById('btn');
+        a.addEventListener('click', function(){
+            getdata();
+        })
+    </script>
+</body>
+</html>
