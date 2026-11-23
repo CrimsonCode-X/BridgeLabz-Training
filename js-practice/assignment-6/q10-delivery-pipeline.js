@@ -1,0 +1,4 @@
+// Q10: Async Delivery Pipeline
+function deliveryStep(message){return new Promise((resolve,reject)=>{const delay=1000+Math.random()*1000;setTimeout(()=>Math.random()<0.15?reject(new Error(message+" failed")):resolve(message),delay);});}
+async function runPipeline(){console.log("Start Pipeline");try{console.log("Step 1:",await deliveryStep("Order taken"));console.log("Step 2:",await deliveryStep("Food prepared"));console.log("Step 3:",await deliveryStep("Package ready"));console.log("Step 4:",await deliveryStep("Out for delivery"));console.log("Delivery completed!");}catch(error){console.error("Pipeline failed!",error.message);}}
+runPipeline();
