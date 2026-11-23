@@ -1,0 +1,3 @@
+// Q3: Callback to Promise migration
+function getBugs(){return new Promise((resolve,reject)=>setTimeout(()=>{const apiFailed=Math.random()<0.3;if(apiFailed)reject(new Error("Bug API failed"));else resolve(["UI glitch","API timeout","Login failure"]);},1000));}
+getBugs().then(bugs=>console.table(bugs.map((bug,index)=>({id:index+1,bug})))).catch(error=>console.error("Unable to fetch bugs:",error.message));
