@@ -1,0 +1,5 @@
+// Q1: Async Coffee Maker
+function boilWater(){return new Promise((resolve,reject)=>setTimeout(()=>Math.random()<0.2?reject(new Error("Water boiling failed")):resolve("Water boiled"),1500));}
+function brewCoffee(){return new Promise((resolve,reject)=>setTimeout(()=>Math.random()<0.2?reject(new Error("Brewing failed")):resolve("Coffee brewed"),1200));}
+function pourCoffee(){return new Promise((resolve,reject)=>setTimeout(()=>Math.random()<0.2?reject(new Error("Pouring failed")):resolve("Coffee poured into cup"),1000));}
+boilWater().then(message=>{console.log(message);return brewCoffee();}).then(message=>{console.log(message);return pourCoffee();}).then(message=>{console.log(message);console.log("Coffee ready for the team!");}).catch(error=>console.error("Coffee process failed:",error.message));
